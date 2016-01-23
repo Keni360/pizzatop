@@ -1,0 +1,249 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03/12/2015, 09:50:39
+    Author     : mauro
+*/
+/*
+======================================================================================
+RESET
+======================================================================================
+*/
+*{margin:0px; padding:0px;}
+
+
+/*
+======================================================================================
+Sprite Icons
+======================================================================================
+*/
+
+.ico-face{
+    height:26px;
+    width:26px;
+    background-size: 400%;
+    background-image: url("../img/redesSociais.png");
+    background-position:0% 0%;
+    display:inline-block;
+}
+.ico-twitter{
+    height:26px;
+    width:26px;
+    background-size: 400%;
+    background-image: url("../img/redesSociais.png");
+    background-position:34% 0%;
+    display:inline-block;
+}
+
+.ico-youtube{
+    height:26px;
+    width:26px;    background-size: 400%;
+    background-image: url("../img/redesSociais.png");
+    background-position:66% 0%;
+    display:inline-block;
+}
+
+.ico-instagran{
+    height:26px;
+    width:26px;
+    background-size: 400%;
+    background-image: url("../img/redesSociais.png");
+    background-position:100% 0%;
+    display:inline-block;
+}
+/*================================================*/
+
+body{width:100%;font-family: Arial;height:100%; color:#fff;}
+
+.body-bg{
+    background-image: url('../img/pizzabg.jpg'); 
+    background-size:90em; 
+    background-repeat:no-repeat; 
+    background-position:0px 0px; 
+}
+
+/*Lista sem marcações*/
+.list-clean{
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+.text-p{font-size:.9em;}
+.text-m{font-size:1.1em;}
+.text-g{font-size:1.3em;}
+
+/*
+======================================================================================
+Sessão principal (HOME)- flotoando a esquerda
+======================================================================================
+*/
+.main-aside {
+    background-color: #E67E22;
+    min-width:280px;
+    width:20%;
+    min-height: 550px;
+    height:85vh;
+    float:left;
+    margin-left:5%;
+    text-align: center;
+}
+
+/*
+======================================================================================
+CABEÇALHO
+======================================================================================
+*/
+
+.header-logo {
+    border-bottom:solid #fff 3px;
+    margin:5px;
+}
+
+.header-logo footer{font-size:.8em; margin:10px auto;}
+
+
+/*
+======================================================================================
+NOTICIAS/NOVIDADES da home
+======================================================================================
+*/
+
+#news{ width:60%; margin:20px auto;padding:10px 20px; border:solid 2px #fff;}
+#news article header{margin:10px;}
+
+
+
+#rodape{
+    
+}
+
+/*Nav Menu*/
+
+/*
+======================================================================================
+Menu Mobile
+======================================================================================
+*/
+
+    
+    .menu-mobile{margin:auto;display:block;width:100%;text-align:center; display:none;}
+    .sub-menu-mobile{height:0px; overflow: hidden; transition:all 1s;}
+    .menu-mobile li{border-bottom:solid #fff 1px;}
+
+.btn-menu-mobile{display:block;border:solid #fff 2px;background-color:red; width:50px;margin:5px auto ;border-radius:50px;}
+
+/*
+======================================================================================
+MENU - DESKTOP
+======================================================================================
+*/
+.nav-menu{
+    width:auto;
+    height:80px;
+    float:left;
+    margin-left: 35%;   
+    position:absolute;
+}
+
+.menu {
+    position:relative;
+    list-style: none;
+    margin:auto;
+    height:100%;
+    overflow:hidden;
+    color:#fff;
+    transition:all 1s;
+    font-weight: bold;
+}
+.menu li {
+    border-bottom:solid 5px #E67E22;
+    text-align: center;
+    cursor: pointer;
+    padding-top:12%;
+    padding-bottom: 0.5%;
+    max-height:95%;
+    display:inline-block;
+    width:150px;
+    margin:auto; 
+    position:relative;
+    
+}
+.menu div{
+    width:100%; 
+    height:0%; 
+    background-color:#E67E22; 
+    z-index: -1; 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    transition:.5s all;
+}
+
+
+
+.menu li:hover div{height:100%;}
+.menu .ativo{height:100%; transition: all 1s;}
+
+/*
+======================================================================================
+======================================================================================
+*/
+
+/*
+======================================================================================
+tablet-portrait: min:768px - max:1024px;
+======================================================================================
+*/
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    .nav-menu{
+        margin-left: 40%;
+    }
+}
+
+
+
+/*
+======================================================================================
+small-tablet-portrait: min:600px - max:799px;
+======================================================================================
+*/
+
+@media screen and (min-width:600px) and (max-width:799px){
+    
+    .nav-menu{ margin:auto auto; display:block;float:none; top:0px;width:auto; left:12%;}
+    
+    .menu li {padding-top:50px; margin:auto; float:none;}
+    .main-aside{margin:100px auto 0px auto;float:none;}
+}
+
+/*
+======================================================================================
+mobile-landscape: min:480px - max:599px;
+======================================================================================
+*/
+@media screen and (min-width:480px) and (max-width:599px){
+    .nav-menu{background-color:#E67E22;display:block;width:100%;position:fixed; margin:0;top:0;height:auto;}
+    .nav-menu ul {list-style:none;}
+    .menu-mobile{display:block;}
+    .menu{display:none;}
+    .main-aside{margin:100px auto 0px auto;float:none;}
+    
+}
+
+/*
+======================================================================================
+mobile-portrait: min:300px - max:479px;
+======================================================================================
+*/
+@media screen and (min-width:300px) and (max-width:479px){
+    
+    .nav-menu{background-color:#E67E22;display:block;width:100%;position:fixed; margin:0;top:0;height:auto;}
+    .nav-menu ul {list-style:none;}
+    .menu{display:none;}
+    .menu-mobile{display:block;}
+    .main-aside{margin:100px auto 0px auto;float:none;}
+}
