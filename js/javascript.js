@@ -20,7 +20,7 @@ window.onload = function(){
         btnOn = !btnOn;
         
         if(btnOn){
-            subMenu.style.height = "60px";
+            subMenu.style.height = "90px";
         }else{
             subMenu.style.height = "0px";
         }

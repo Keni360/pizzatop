@@ -131,10 +131,13 @@ Menu Mobile
 
     
     .menu-mobile{margin:auto;display:block;width:100%;text-align:center; display:none;}
-    .sub-menu-mobile{height:0px; overflow: hidden; transition:all 1s;}
+    .sub-menu-mobile{height:0px; overflow: hidden; transition:all 1s; border:solid #fff 1px;}
     .menu-mobile li{border-bottom:solid #fff 1px;}
+    .sub-menu-mobile li{transition:all 1s; cursor:pointer; padding:5px;}
+    .sub-menu-mobile li:hover {background-color:rgba(0,0,0,.3);}
 
-.btn-menu-mobile{display:block;border:solid #fff 2px;background-color:red; width:50px;margin:5px auto ;border-radius:50px;}
+.btn-menu-mobile{display:block;border:solid #fff 2px;background-color:transparent; padding:5px; max-width:50px;margin:5px auto ;border-radius:50px;cursor: pointer;transition:all .5s;}
+.btn-menu-mobile:hover{background-color:rgba(0,0,0,.2);}
 
 /*
 ======================================================================================
@@ -230,7 +233,7 @@ mobile-landscape: min:480px - max:599px;
     .nav-menu ul {list-style:none;}
     .menu-mobile{display:block;}
     .menu{display:none;}
-    .main-aside{margin:100px auto 0px auto;float:none;}
+    .main-aside{margin:60px auto 0px auto;float:none;}
     
 }
 
@@ -240,10 +243,9 @@ mobile-portrait: min:300px - max:479px;
 ======================================================================================
 */
 @media screen and (min-width:300px) and (max-width:479px){
-    
     .nav-menu{background-color:#E67E22;display:block;width:100%;position:fixed; margin:0;top:0;height:auto;}
     .nav-menu ul {list-style:none;}
     .menu{display:none;}
     .menu-mobile{display:block;}
-    .main-aside{margin:100px auto 0px auto;float:none;}
+    .main-aside{margin:60px auto 0px auto;float:none;}
 }
